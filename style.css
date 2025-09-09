@@ -1,0 +1,352 @@
+:root {
+    --primary-color: #007bff;
+    --secondary-color: #6c757d;
+    --background-color: #f8f9fa;
+    --text-color: #343a40;
+    --card-bg: #ffffff;
+    --border-color: #e2e2e2;
+    --shadow-color: rgba(0, 0, 0, 0.08);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    -webkit-font-smoothing: antialiased;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* Header & Navigation */
+.main-header {
+    background-color: var(--card-bg);
+    padding: 1rem 0;
+    box-shadow: 0 2px 4px var(--shadow-color);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.main-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+}
+
+.main-nav li a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+    transition: color 0.3s ease;
+}
+
+.main-nav li a:hover {
+    color: var(--primary-color);
+}
+
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(135deg, #007bff, #0056b3);
+    color: #fff;
+    padding: 4rem 0;
+    text-align: center;
+}
+
+.hero-section h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.hero-section p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+}
+
+.cta-btn {
+    display: inline-block;
+    padding: 0.8rem 1.8rem;
+    border-radius: 5px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.cta-btn:hover {
+    transform: translateY(-2px);
+}
+
+.primary-btn {
+    background-color: #fff;
+    color: var(--primary-color);
+}
+
+.secondary-btn {
+    background-color: transparent;
+    border: 2px solid #fff;
+    color: #fff;
+    margin-left: 1rem;
+}
+
+/* Search Bar */
+.search-section {
+    padding: 1.5rem 0;
+    background-color: #fff;
+    box-shadow: 0 1px 3px var(--shadow-color);
+}
+
+.search-box {
+    display: flex;
+    justify-content: center;
+}
+
+.search-box input {
+    width: 100%;
+    max-width: 600px;
+    padding: 0.8rem 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 25px;
+    font-size: 1rem;
+    outline: none;
+}
+
+.search-box button {
+    background-color: var(--primary-color);
+    color: #fff;
+    border: none;
+    padding: 0.8rem 1.2rem;
+    border-radius: 25px;
+    margin-left: -40px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.search-box button:hover {
+    background-color: #0056b3;
+}
+
+/* General Sections */
+section {
+    padding: 3rem 0;
+}
+
+h2 {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--text-color);
+}
+
+.link-grid,
+.class-grid {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    text-align: center;
+}
+
+.link-card,
+.class-card {
+    background-color: var(--card-bg);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px var(--shadow-color);
+    text-decoration: none;
+    color: var(--text-color);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.link-card:hover,
+.class-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px var(--shadow-color);
+}
+
+.link-card h3,
+.class-card h3 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+}
+
+.testimonials {
+    background-color: #eaf3ff;
+}
+
+.testimonial-card {
+    background-color: var(--card-bg);
+    padding: 2rem;
+    border-left: 4px solid var(--primary-color);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px var(--shadow-color);
+    margin: 1.5rem auto;
+    max-width: 800px;
+}
+
+.testimonial-card p {
+    font-style: italic;
+    margin-bottom: 1rem;
+}
+
+.testimonial-card h4 {
+    text-align: right;
+    font-weight: 600;
+    color: var(--secondary-color);
+}
+
+/* Footer */
+.main-footer {
+    background-color: var(--text-color);
+    color: #f8f9fa;
+    padding: 2rem 0;
+    text-align: center;
+}
+
+.footer-links a {
+    color: #f8f9fa;
+    text-decoration: none;
+    margin: 0 1rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: var(--primary-color);
+}
+
+.main-footer p {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+}
+
+/* Page-specific styling for internal pages */
+.content-page-header {
+    background-color: var(--card-bg);
+    padding: 2rem 0;
+    box-shadow: 0 2px 4px var(--shadow-color);
+}
+
+.content-page-header h1 {
+    font-size: 2rem;
+    text-align: center;
+    color: var(--primary-color);
+}
+
+.subject-nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: #eaf3ff;
+    padding: 1rem 0;
+    margin-bottom: 2rem;
+    border-radius: 8px;
+}
+
+.subject-nav a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 600;
+    padding: 0.7rem 1.2rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border-radius: 25px;
+    margin: 0.25rem;
+}
+
+.subject-nav a.active,
+.subject-nav a:hover {
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+.content-section {
+    padding: 2rem 0;
+}
+
+.content-section h3 {
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
+    color: var(--primary-color);
+}
+
+.resource-list {
+    list-style: none;
+}
+
+.resource-list li {
+    background-color: var(--card-bg);
+    margin-bottom: 1rem;
+    padding: 1.2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px var(--shadow-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.resource-list a {
+    text-decoration: none;
+    color: var(--primary-color);
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.resource-list a:hover {
+    color: #0056b3;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .main-header .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .main-nav ul {
+        justify-content: center;
+        margin-top: 1rem;
+    }
+
+    .hero-section h1 {
+        font-size: 2rem;
+    }
+
+    .cta-buttons {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cta-btn {
+        width: 100%;
+        margin: 0.5rem 0;
+    }
+
+    .search-box input {
+        width: 90%;
+    }
+}
